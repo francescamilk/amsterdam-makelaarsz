@@ -13,8 +13,11 @@
 @import "pages/index";
 
 
+body {
+  background-color: #fff;
+}
+
 // To make footer sticky to bottom
 .content {
   min-height: calc(100vh - 80px);
-  background-color: #fff;
 }
