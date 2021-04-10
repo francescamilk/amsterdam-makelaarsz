@@ -1,18 +1,19 @@
-
-<%= simple_form_for(@property) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :price %>
-    <%= f.input :rooms %>
-    <%= f.input :bedrooms %>
-    <%= f.input :bathrooms %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-outline-dark" %>
-  </div>
-<% end %>
+<div class="form-container p-3 p-md-5 m-md-3">
+  <%= simple_form_for(@property) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  
+    <div class="form-inputs">
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :price %>
+      <%= f.input :rooms %>
+      <%= f.input :bedrooms %>
+      <%= f.input :bathrooms %>
+    </div>
+  
+    <div class="form-actions">
+      <%= f.button :submit, class: "btn btn-outline-dark" %>
+    </div>
+  <% end %>
+</div>
