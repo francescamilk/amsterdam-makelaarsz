@@ -58,6 +58,11 @@ class PropertiesController < ApplicationController
     end
   end
 
+  def my_properties
+    @properties = Property.all
+    @my_properties = current_account.properties
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_property

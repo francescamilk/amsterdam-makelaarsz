@@ -22,7 +22,9 @@
     </div>
 
     <footer>
-      <%= render "layouts/footer" %>
+      <% unless current_page?(dashboard_path) %>
+        <%= render "layouts/footer" %>
+      <% end %>
     </footer>
 
     <%# <p class="notice"><%= notice </p> %>
