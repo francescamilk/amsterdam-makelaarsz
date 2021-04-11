@@ -1,0 +1,13 @@
+.property-show {
+  margin: 0 auto;
+  width: 80vw;
+  .photo-main {
+    width: 80vw;
+    height: 40vh;
+    img {
+      width: 80vw;
+      height: 40vh;
+      object-fit: fill;
+    }
+  }
+}

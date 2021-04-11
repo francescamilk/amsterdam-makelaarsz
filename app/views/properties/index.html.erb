@@ -1,14 +1,5 @@
-<% if account_signed_in? %>
-  <div class="row">
-    <%= render "layouts/nav/sidebar" %>
-    <%= render "properties/pro_index" %>
-  </div>
-<% else %>
-  <div class="mt-4">
-    <%= render "properties/properties" %>
-  </div>
-<% end %>
-
-
+<div class="mt-4">
+  <%= render "properties/properties" %>
+</div>
 
 <p id="notice"><%= notice %></p>

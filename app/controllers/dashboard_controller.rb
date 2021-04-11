@@ -1,10 +1,6 @@
 class DashboardController < ApplicationController
   def index
-  end
-
-  def properties
-  end
-
-  def report
+    @properties = Property.all
+    @my_properties = current_account.properties
   end
 end

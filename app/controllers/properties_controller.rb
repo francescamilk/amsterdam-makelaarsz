@@ -9,6 +9,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1 or /properties/1.json
   def show
+    @disable_nav = true
   end
 
   # GET /properties/new
