@@ -1,13 +1,7 @@
-.property-show {
-  margin: 0 auto;
-  width: 80vw;
-  .photo-main {
-    width: 80vw;
-    height: 40vh;
-    img {
-      width: 80vw;
-      height: 40vh;
-      object-fit: fill;
-    }
-  }
+.photo-main {
+  width: 100vw;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  margin-top: -15px;
 }

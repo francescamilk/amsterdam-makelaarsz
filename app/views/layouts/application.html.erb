@@ -14,9 +14,7 @@
 
   <body>
     <header>
-      <% unless @disable_nav %>
-        <%= render "layouts/nav/public" %>
-      <% end %>
+      <%= render "layouts/nav/public" %>
     </header>
 
     <div class="content">
@@ -24,7 +22,7 @@
     </div>
 
     <footer>
-      <% unless current_page?(dashboard_path) || @disable_nav %>
+      <% unless current_page?(dashboard_path)%>
         <%= render "layouts/footer" %>
       <% end %>
     </footer>

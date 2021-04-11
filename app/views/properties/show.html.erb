@@ -1,44 +1,51 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container">
-  <div class="property-show">
-    <div class="photo-main">
-      <%= image_tag @property.photos[0] %>
+<div class="property-show">
+  <div class="photo-main" style="background-image:url('<%= url_for( @property.photos[0]) %>')">
+  </div>
+  
+  <div class="container">
+    <div class="row mt-2">
+      <div class="col-8">
+        <p>
+          <strong>Name:</strong>
+          <%= @property.name %>
+        </p>
+        
+        <p>
+          <strong>Address:</strong>
+          <%= @property.address %>
+        </p>
+        
+        <p>
+          <strong>Price:</strong>
+          <%= @property.price %>
+        </p>
+        
+        <p>
+          <strong>Rooms:</strong>
+          <%= @property.rooms %>
+        </p>
+        
+        <p>
+          <strong>Bedrooms:</strong>
+          <%= @property.bedrooms %>
+        </p>
+        
+        <p>
+          <strong>Bathrooms:</strong>
+          <%= @property.bathrooms %>
+        </p>
+      </div>
+
+      <div class="col-4">
+        <%= render "properties/agent_info" %>
+      </div>
     </div>
-  
-    <p>
-      <strong>Name:</strong>
-      <%= @property.name %>
-    </p>
-    
-    <p>
-      <strong>Address:</strong>
-      <%= @property.address %>
-    </p>
-    
-    <p>
-      <strong>Price:</strong>
-      <%= @property.price %>
-    </p>
-    
-    <p>
-      <strong>Rooms:</strong>
-      <%= @property.rooms %>
-    </p>
-    
-    <p>
-      <strong>Bedrooms:</strong>
-      <%= @property.bedrooms %>
-    </p>
-    
-    <p>
-      <strong>Bathrooms:</strong>
-      <%= @property.bathrooms %>
-    </p>
-  
-    <i class="fas fa-undo-alt"></i> <%= link_to 'Back', properties_path %>
   </div>
 </div>
+
+<i class="fas fa-undo-alt"></i> <%= link_to 'Back', properties_path %>
 
 <% if account_signed_in? && @property.account_id == current_account.id %>
   <%= link_to 'Edit', edit_property_path(@property) %>

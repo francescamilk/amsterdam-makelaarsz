@@ -9,7 +9,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1 or /properties/1.json
   def show
-    @disable_nav = true
+    @agent = Account.find(@property.account_id)
   end
 
   # GET /properties/new
