@@ -1,0 +1,7 @@
+<% @properties.each do |property| %>
+  <div class="col-3">
+    <%= image_tag property.photos[0], style: "height:200px" %>
+    <h4><%= property.name %></h4>
+    <p><%= property.address %></p>
+  </div>
+<% end %>
