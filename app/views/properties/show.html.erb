@@ -39,7 +39,7 @@
 
     <div class="row">
       <div class="col-8 border-top border-bottom d-flex justify-content-between">
-        <p class="mt-3 text-success"><strong><i class="fas fa-comments-dollar"></i> Est. Monthly Payment of <%= number_to_currency(@property.price / 360, :locale => :en) %></strong></p>
+        <p class="mt-3 text-success"><strong><i class="fas fa-comments-dollar"></i> Est. Monthly Payment of <%= number_to_currency(@property.price / 360, :locale => :en) %>*</strong></p>
         <p class="mt-3 text-success"><strong><i class="fas fa-search-dollar"></i> Can I afford this property?</strong></p>
       </div>
     </div>
@@ -51,7 +51,9 @@
         <div id="property-details">
           <p class="text-justify"><%= @property.description %></p>
         </div>
-        <button class="btn btn-outline-dark" id="toggleDetails">Show More</button>
+        <button class="btn btn-outline-dark mt-2" id="toggleDetails">Show More</button>
+
+        <p class="text-mortgage mt-5">* This rate is based on a 30 year mortgage, after paying an initial 10% down payment. Shorter term mortgages would require a highly monthly repayment.</p>
       </div>
     </div>
   </div>

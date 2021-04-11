@@ -1,7 +1,7 @@
 require("@rails/ujs").start()
-require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+// require("turbolinks").start()
 
 var jQuery = require("jquery")
 global.$ = global.jQuery = jQuery

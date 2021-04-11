@@ -6,6 +6,7 @@ class Account < ApplicationRecord
 
   validates :first_name, :last_name, :company, presence: true
   
+  has_one_attached :photo
   has_many :properties
 
   def full_name

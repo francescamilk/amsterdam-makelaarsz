@@ -1,7 +1,16 @@
 <div class="agent-info">
+    <div class="agent-img text-center">
+      <% if @agent.photo.present? %>
+        <%= image_tag @agent.photo, class: "avatar-agent" %>
+      <% else %>
+        <% image_tag "https://cdn2.iconfinder.com/data/icons/avatar-profile/422/  avatar_tie_user_default_suit_display_business-512.png", class: "avatar-agent" %>
+      <% end %>
+    </div>
   <h5><%= @agent.full_name %></h5> 
   <p><%= @agent.company %></p>
 
-  <button class="btn btn-dark"><i class="fas fa-phone-square-alt"></i> Call <%= @agent.first_name %></button>
-  <button class="btn btn-dark"><i class="fas fa-envelope-square"></i> Email <%= @agent.first_name %></button>  
+  <div class="call-to-action d-flex justify-content-between">
+    <button class="btn btn-dark"><i class="fas fa-phone-square-alt"></i> Call <%= @agent.first_name %></button>
+    <button class="btn btn-dark"><i class="fas fa-envelope-square"></i> Mail <%= @agent.first_name %></button>  
+  </div>
 </div>
