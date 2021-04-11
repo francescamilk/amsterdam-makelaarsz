@@ -5,3 +5,11 @@
   background-position: center;
   margin-top: -15px;
 }
+
+#property-details {
+  height: 100px;
+  overflow: hidden;
+  &.open {
+    height: auto;
+  }
+}
