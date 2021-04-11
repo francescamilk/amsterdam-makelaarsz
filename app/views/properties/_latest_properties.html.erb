@@ -1,7 +1,21 @@
 <% @properties.each do |property| %>
-  <div class="col-3">
-    <%= image_tag property.photos[0], style: "height:200px" %>
-    <h4><%= property.name %></h4>
-    <p><%= property.address %></p>
+  <div class="col-4">
+    <div class="card-latest mb-4">
+      <%= link_to(property_path(property)) do %>
+        <%= image_tag property.photos[0] %>
+        <div class="c-header mt-2 px-3">
+        <h4><%= property.name %></h4>
+        <p><%= property.address %></p>
+        <hr>
+        </div>
+      <% end %>
+      <div class="c-details d-flex justify-content-between px-3 mb-2">
+        
+          <p><i class="fas fa-couch fa-sm"></i> <%= property.rooms %></p>
+          <p><i class="fas fa-bed fa-sm"></i> <%= property.bedrooms %></p>
+          <p><i class="fas fa-tag fa-sm"></i> <%= property.price %></p>
+
+      </div>
+    </div>
   </div>
 <% end %>
