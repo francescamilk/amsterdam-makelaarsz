@@ -7,5 +7,5 @@ class Property < ApplicationRecord
   validates :bathrooms, presence: true
 
   belongs_to :account
-  has_many_attached :photo
+  has_many_attached :photos
 end
