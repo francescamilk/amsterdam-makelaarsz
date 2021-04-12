@@ -6,15 +6,15 @@
   
   <div class="container mt-4">
     <div class="row">
-      <div class="col-8">
+      <div class="col-md-8">
         <div class="row d-flex justify-content-between">
-          <div class="col-5">
+          <div class="col-md-6">
             <h5 class="property-info m-1"><%= @property.address %></h5>
             <h3><%= number_to_currency(@property.price, :locale => :en) %></h3>
           </div>
 
-          <div class="col-6 text-center bg-light">
-            <div class="row mr-2 bg-light p-2">
+          <div class="col-md-6 text-center bg-light">
+            <div class="row mr-md-2 bg-light p-2">
               <div class="col-4">
                 <p class="m-0"><strong>Rooms</strong></p>
                 <span><%= @property.rooms %></span>
@@ -30,34 +30,38 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-4">
-        <%= render "properties/agent_info" %>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-8 border-top border-bottom d-flex justify-content-between">
-        <p class="mt-3 text-success"><strong><i class="fas fa-comments-dollar"></i> Est. Monthly Payment of <%= number_to_currency(@property.price / 360, :locale => :en) %>*</strong></p>
-        <p class="mt-3 text-success"><strong><i class="fas fa-search-dollar"></i> Can I afford this property?</strong></p>
-      </div>
-    </div>
-
-    <div class="row mt-5">
-      <div class="col-8">
-        <h3><%= @property.name %></h3>
-        <h5>Property Description</h5>
-        <div id="property-details">
-          <p class="text-justify"><%= @property.description %></p>
+        <div class="row">
+          <div class="col-md-12 mt-4 border-top border-bottom d-flex justify-content-between">
+            <p class="mt-3 text-success"><strong><i class="fas fa-comments-dollar"></i> Est. Monthly Payment of <%= number_to_currency(@property.price / 360, :locale => :en) %>*</strong></p>
+            <p class="mt-3 text-success"><strong><i class="fas fa-search-dollar"></i> Can I afford this property?</strong></p>
+          </div>
         </div>
-        <button class="btn btn-outline-dark mt-2" id="toggleDetails">Show More</button>
 
-        <p class="text-mortgage mt-5">* This rate is based on a 30 year mortgage, after paying an initial 10% down payment. Shorter term mortgages would require a highly monthly repayment.</p>
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h3><%= @property.name %></h3>
+          <h5>Property Description</h5>
+  
+          <div id="property-details">
+            <p class="text-justify"><%= @property.description %></p>
+          </div>
+  
+          <button class="btn btn-outline-dark mt-2" id="toggleDetails">Show More</button>
+  
+          <p class="text-mortgage mt-5">* This rate is based on a 30 year mortgage, after paying an initial 10% down payment. Shorter term mortgages would require a highly monthly repayment.</p>
+        </div>
       </div>
     </div>
+
+    <div class="col-md-4">
+      <%= render "properties/agent_info" %>
+    </div>
+  
   </div>
 </div>
+
+
 
 <i class="fas fa-undo-alt"></i> <%= link_to 'Back', properties_path %>
 

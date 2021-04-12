@@ -1,11 +1,11 @@
-<div class="agent-info">
-    <div class="agent-img text-center">
-      <% if @agent.photo.present? %>
-        <%= image_tag @agent.photo, class: "avatar-agent" %>
-      <% else %>
-        <% image_tag "https://cdn2.iconfinder.com/data/icons/avatar-profile/422/  avatar_tie_user_default_suit_display_business-512.png", class: "avatar-agent" %>
-      <% end %>
-    </div>
+<div class="agent-info text-center p-2 border">
+
+  <% if @agent.photo.present? %>
+    <%= image_tag @agent.photo, class: "avatar-agent mb-3" %>
+  <% else %>
+    <%= image_tag "https://cdn2.iconfinder.com/data/icons/avatar-profile/422/avatar_tie_user_default_suit_display_business-512.png", class: "avatar-agent mb-3" %>
+  <% end %>
+
   <h5><%= @agent.full_name %></h5> 
   <p><%= @agent.company %></p>
 
