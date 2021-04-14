@@ -3,4 +3,8 @@ class DashboardController < ApplicationController
     @properties = Property.all
     @my_properties = current_account.properties
   end
+
+  def profile
+    @account = Account.find(params[:id])
+  end
 end
