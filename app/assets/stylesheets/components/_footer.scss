@@ -28,3 +28,9 @@
 .footer .fa-heart {
   color: #D23333;
 }
+
+@media only screen and (max-width: 400px) {
+  .footer-copyright {
+    display: none;
+  }
+}

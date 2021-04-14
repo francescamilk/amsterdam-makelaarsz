@@ -17,14 +17,17 @@
             <div class="row mr-md-2 bg-light p-2">
               <div class="col-4">
                 <p class="m-0"><strong>Rooms</strong></p>
+                <i class="fas fa-couch fa-sm"></i>
                 <span><%= @property.rooms %></span>
               </div>
               <div class="col-4">
                 <p class="m-0"><strong>Bedrooms</strong></p>
+                <i class="fas fa-bed fa-sm"></i>
                 <span><%= @property.bedrooms %></span>
               </div>
               <div class="col-4">
                 <p class="m-0"><strong>Bathrooms</strong></p>
+                <i class="fas fa-bath fa-sm"></i>
                 <span><%= @property.bathrooms %></span>
               </div>
             </div>
@@ -42,13 +45,10 @@
         <div class="col-md-12">
           <h3><%= @property.name %></h3>
           <h5>Property Description</h5>
-  
           <div id="property-details">
             <p class="text-justify"><%= @property.description %></p>
           </div>
-  
           <button class="btn btn-outline-dark mt-2" id="toggleDetails">Show More</button>
-  
           <p class="text-mortgage mt-5">* This rate is based on a 30 year mortgage, after paying an initial 10% down payment. Shorter term mortgages would require a highly monthly repayment.</p>
         </div>
       </div>
@@ -57,10 +57,8 @@
     <div class="col-md-4">
       <%= render "properties/agent_info" %>
     </div>
-  
   </div>
 </div>
-
 
 
 <i class="fas fa-undo-alt"></i> <%= link_to 'Back', properties_path %>

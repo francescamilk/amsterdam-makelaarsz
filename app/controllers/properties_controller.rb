@@ -9,7 +9,8 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1 or /properties/1.json
   def show
-    @agent = Account.find(@property.account_id)
+    @agent = @property.account
+    @agent_properties = Property.where(account_id: @agent)
   end
 
   # GET /properties/new
