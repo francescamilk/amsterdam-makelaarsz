@@ -10,6 +10,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
+gem 'toastr-rails'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

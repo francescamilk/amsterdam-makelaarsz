@@ -1,6 +1,10 @@
 class PublicController < ApplicationController
   def main
-    @properties = Property.latest[0..5]
+    @latest_properties = Property.latest[0..5]
+    
+    if account_signed_in?
+      redirect_to dashboard_path, flash: { success: "Succesfully signed in. Welcome to Amsterdam Makelaars!" } and return
+    end
   end
 
   def my_properties
