@@ -7,10 +7,11 @@
   <div class="container mt-4">
     <div class="row">
       <div class="col-md-8">
+        <p><strong><%= @property.for_sale? ? "For Sale" : "For Rent" %></strong></p>
         <div class="row d-flex justify-content-between">
           <div class="col-md-6">
-            <h5 class="property-info m-1"><%= @property.address %></h5>
-            <h3><%= number_to_currency(@property.price, :locale => :en) %></h3>
+            <h5 class="property-info"><%= @property.address %></h5>
+            <h3><%= number_to_currency(@property.price, :locale => :en) %> <%= @property.for_sale? ? "tot." : "/ month" %></h3>
           </div>
 
           <div class="col-md-6 text-center bg-light">
@@ -36,7 +37,11 @@
 
         <div class="row">
           <div class="col-md-12 mt-4 border-top border-bottom d-flex justify-content-between">
-            <p class="mt-3 text-success"><strong><i class="fas fa-comments-dollar"></i> Est. Monthly Payment of <%= number_to_currency(@property.price / 360, :locale => :en) %>*</strong></p>
+            <% if @property.for_sale? %>
+              <p class="mt-3 text-success"><strong><i class="fas fa-comments-dollar"></i> Est. Monthly Payment of <%= number_to_currency(@property.price / 360, :locale => :en) %>*</strong></p>
+            <% else %>
+              <p class="mt-3 text-primary"><strong><i class="far fa-lightbulb"></i> Available from <%= @property.available_date.strftime("%a") %>, <%= @property.available_date.day.ordinalize %> <%= @property.available_date.strftime("%b") %></strong></p>
+            <% end %>
             <p class="mt-3 text-success"><strong><i class="fas fa-search-dollar"></i> Can I afford this property?</strong></p>
           </div>
         </div>
