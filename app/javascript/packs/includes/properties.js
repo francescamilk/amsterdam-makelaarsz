@@ -1,7 +1,8 @@
 $(function(){
   $("#showPhone").on("click", function(){
-    var $button = $(this)
-    $button.text( $button.data("phone") )
+    var $button = $(this);
+
+    $button.find("span").text( $button.data("phone") )
   });
 
 
@@ -17,3 +18,7 @@ $(function(){
   })
 });
 
+$('#mailModal').on('show.bs.modal', function (event) {
+  var recipient = button.data('mail');
+  var modal = $(this);
+})
