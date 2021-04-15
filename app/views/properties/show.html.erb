@@ -61,6 +61,17 @@
 
     <div class="col-md-4">
       <%= render "properties/agent_info" %>
+
+      <iframe
+      class="mt-4"
+      width="100%"
+      height="300px"
+      style="border:0"
+      loading="lazy"
+      allowfullscreen
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCeKKpzIbagFEqQdSJo1AMMfaNV-M-LNzg
+        &q=<%= @property.address %>">
+    </iframe>
     </div>
   </div>
 </div>
