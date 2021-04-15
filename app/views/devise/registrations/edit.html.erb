@@ -7,21 +7,26 @@
   
     <div class="form-inputs">
       <%= f.input :email, required: true, autofocus: true %>
-      <div class="d-flex justify-content-around">
+      <div class="d-flex justify-content-between">
         <%= f.input :first_name,
                     required: false,
                     autofocus: true %>
         <%= f.input :last_name,
                     required: false,
                     autofocus: true %>
+      </div>
+      <div class="d-flex justify-content-between">
         <%= f.input :company,
                     required: true,
                     autofocus: true %>
+        <%= f.input :telephone,
+                    required: true,
+                    autofocus: true %>
+      </div>
       <%= f.input   :photo, 
                     hint: "Leave it blank if you don't want to change it.",
                     as: :file, 
                     input_html: { multiple: false } %>
-      </div>  
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
       <% end %>
