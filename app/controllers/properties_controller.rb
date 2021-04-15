@@ -5,9 +5,6 @@ class PropertiesController < ApplicationController
   # GET /properties or /properties.json
   def index
     @properties = Property.all
-
-    @for_sale = Property.where(for_sale: true)
-    @for_rent = Property.where(for_sale: false)
   end
 
   # GET /properties/1 or /properties/1.json
@@ -68,13 +65,18 @@ class PropertiesController < ApplicationController
     @my_properties = current_account.properties
   end
 
+  def for_sale
+    @for_sale = Property.where(for_sale: true)
+  end
+
+  def for_rent
+    @for_rent = Property.where(for_sale: false)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_property
       @property = Property.find(params[:id])
-      
-      @for_sale = Property.where(for_sale: true)
-      @for_rent = Property.where(for_sale: false)
     end
 
     # Only allow a list of trusted parameters through.
