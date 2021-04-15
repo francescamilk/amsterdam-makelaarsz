@@ -1,14 +1,17 @@
-<% properties.limit(3).each do |property| %>
-  <div class="card-product border">
-    <%= image_tag property.photos[0] %>
-    <div class="card-product-infos">
-      <h2><%= property.name %></h2>
-      <p><%= property.address %></p>
-    </div>
-    <div class="product-amenities">
-      <p class="mr-4"><i class="fas fa-couch fa-sm"></i> <%= property.rooms %></p>
-      <p class="mr-4"><i class="fas fa-bed fa-sm"></i> <%= property.bedrooms %></p>
-      <p><i class="fas fa-bath fa-sm"></i> <%= property.bathrooms %></p>
-    </div>
+<% properties.limit(4).each do |property| %>
+  <div class="col-md-3">
+    <%= link_to(property_path(property)) do %>
+      <div class="product-thumb"><%= image_tag property.photos[0] %></div>
+      <div class="card-product-infos border px-1">
+        <h4><%= property.name %></h4>
+        <p class="m-0"><%= property.address %></p>
+        <p class="m-0"><%= @property.for_sale? ? "For Sale" : "For Rent" %></p>
+        <div class="product-amenities d-flex mt-1">
+          <p class="mr-4"><i class="fas fa-couch fa-sm"></i> <%= property.rooms %></p>
+          <p class="mr-4"><i class="fas fa-bed fa-sm"></i> <%= property.bedrooms %></p>
+          <p><i class="fas fa-bath fa-sm"></i> <%= property.bathrooms %></p>
+        </div>
+      </div>
+    <% end %>
   </div>
 <% end %>

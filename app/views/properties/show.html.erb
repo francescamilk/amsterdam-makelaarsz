@@ -49,7 +49,7 @@
       <div class="row mt-5">
         <div class="col-md-12">
           <h3><%= @property.name %></h3>
-          <h5>Property Description</h5>
+          <h5>Property Description:</h5>
           <div id="property-details">
             <p class="text-justify"><%= @property.description %></p>
           </div>
@@ -75,12 +75,12 @@
     </div>
   </div>
 
-  <section>
+  <section class="mt-5">
     <div class="row">
-      <div class="col-lg-8 mt-4">
-        <h4>More from <%= @agent.company %></h4>
-        <%= render "properties/agent_properties", properties: @agent_properties %>
+      <div class="col-12">
+        <h4>Other properties from <%= @agent.company %></h4>
       </div>
+      <%= render "properties/agent_properties", properties: @agent_properties %>
     </div>
   </section>
 </div>
