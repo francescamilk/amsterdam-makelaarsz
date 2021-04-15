@@ -65,16 +65,26 @@
       <iframe
       class="mt-4"
       width="100%"
-      height="300px"
+      height="250px"
       style="border:0"
       loading="lazy"
       allowfullscreen
       src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCeKKpzIbagFEqQdSJo1AMMfaNV-M-LNzg
-        &q=<%= @property.address %>">
+        &q=<%= @property.address.to_param %>">
     </iframe>
     </div>
   </div>
+
+  <section>
+    <div class="row">
+      <div class="col-lg-8 mt-4">
+        <h4>More from <%= @agent.company %></h4>
+        <%= render "properties/agent_properties", properties: @agent_properties %>
+      </div>
+    </div>
+  </section>
 </div>
+
 
 
 <i class="fas fa-undo-alt"></i> <%= link_to 'Back', properties_path %>
