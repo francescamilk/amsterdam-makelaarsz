@@ -23,18 +23,14 @@ $(function(){
 
 // email settings (show modal & trigger send)
 
-$('#mailModal').on('show.bs.modal', function (event) {
-  var recipient = button.data('mail');
-  var modal = $(this);
-});
 
 $("#sendMessageToAgent").on("click", function(){
   var agent_id = $("#agent_id").val(),
-    first_name = $("#message-first-name").val(),
-    last_name = $("#message-last-name").val(),
-    email = $("#message-email").val(),
-    message = $("#message-text").val();
-
+  first_name = $("#message-first-name").val(),
+  last_name = $("#message-last-name").val(),
+  email = $("#message-email").val(),
+  message = $("#message-text").val();
+  
   $.ajax({
     url: "/agent/message",
     method: "POST",
@@ -47,7 +43,14 @@ $("#sendMessageToAgent").on("click", function(){
       message: message
     },
     success: function(data){
-      console.log(data);
+      $('#mailModal form').remove()
+      $("#sendMessageToAgent").remove()
+      $('#mailModal .modal-body').html('<p>Your request has been sent succesfully.</p>')
     }
   })
+});
+
+$('#mailModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget);
+  var modal = $(this);
 });
