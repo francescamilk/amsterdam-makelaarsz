@@ -59,18 +59,32 @@ class PropertiesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
+  def for_sale
+    @for_sale = Property.where(for_sale: true)
+  end
+  
+  def for_rent
+    @for_rent = Property.where(for_sale: false)
+  end
+  
   def my_properties
     @properties = Property.all
     @my_properties = current_account.properties
   end
 
-  def for_sale
-    @for_sale = Property.where(for_sale: true)
-  end
+  def email_agent
+    # trigger email send
+    agent_id = params[:agent_id]
+    first_name = params[:first_name]
+    last_name = params[:last_name]
+    email = params[:email]
+    message = params[:message]
 
-  def for_rent
-    @for_rent = Property.where(for_sale: false)
+    # response to script
+    respond_to do |format|
+      format.json { head :no_content }
+    end
   end
 
   private
