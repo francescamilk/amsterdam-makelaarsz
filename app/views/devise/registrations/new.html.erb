@@ -8,17 +8,18 @@
       <%= f.input :email,
                   required: true,
                   autofocus: true %>
-      <div class="d-flex justify-content-between">
-        <%= f.input :first_name,
-                    required: true,
-                    autofocus: true %>
-        <%= f.input :last_name,
-                    required: true,
-                    autofocus: true %>
-        <%= f.input :company,
-                    required: true,
-                    autofocus: true %>
-      </div>  
+      <%= f.input :first_name,
+                  required: true,
+                  autofocus: true %>
+      <%= f.input :last_name,
+                  required: true,
+                  autofocus: true %>
+      <%= f.input :company,
+                  required: true,
+                  autofocus: true %>
+      <%= f.input :telephone,
+                  required: true,
+                  autofocus: true %>
       <%= f.input :password,
                   required: true,
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),

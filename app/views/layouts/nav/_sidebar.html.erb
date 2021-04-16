@@ -2,19 +2,19 @@
   <div class="position-sticky pt-3">
     <ul class="nav flex-column">
       <li class="nav-item">
-        <%= link_to dashboard_path, class: "nav-link" do %>
+        <%= link_to dashboard_path, class: "nav-link text-dark" do %>
           <i data-feather="home"></i>
           Dashboard
         <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to account_properties_path, class: "nav-link" do %>
+        <%= link_to account_properties_path, class: "nav-link text-dark" do %>
           <i data-feather="package"></i>
           My properties
         <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to new_property_path, class: "nav-link" do %>
+        <%= link_to new_property_path, class: "nav-link text-dark" do %>
           <i data-feather="file-plus"></i>
           Add property
         <% end %>
@@ -26,13 +26,13 @@
     </h6>
     <ul class="nav flex-column mb-2">
       <li class="nav-item">
-        <%= link_to profile_path(current_account), class: "nav-link" do %>
+        <%= link_to profile_path(current_account), class: "nav-link text-dark" do %>
         <i data-feather="users"></i>
           My profile
         <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to edit_account_registration_path, class: "nav-link" do %>
+        <%= link_to edit_account_registration_path, class: "nav-link text-dark" do %>
         <i data-feather="settings"></i>
           Edit account
         <% end %>
