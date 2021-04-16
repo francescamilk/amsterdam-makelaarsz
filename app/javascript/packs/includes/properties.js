@@ -24,17 +24,17 @@ $(function(){
 // email settings (show modal & trigger send)
 
 
-$("#sendMessageToAgent").on("click", function(){
-  var agent_id = $("#agent_id").val(),
-  first_name = $("#message-first-name").val(),
-  last_name = $("#message-last-name").val(),
-  email = $("#message-email").val(),
-  message = $("#message-text").val();
+$('#sendMessageToAgent').on('click', function(){
+  var agent_id = $('#agent_id').val(),
+  first_name = $('#message-first-name').val(),
+  last_name = $('#message-last-name').val(),
+  email = $('#message-email').val(),
+  message = $('#message-text').val();
   
   $.ajax({
-    url: "/agent/message",
-    method: "POST",
-    dataType: "json",
+    url: '/agent/message',
+    method: 'POST',
+    dataType: 'json',
     data: {
       agent_id: agent_id,
       first_name: first_name,
@@ -44,7 +44,7 @@ $("#sendMessageToAgent").on("click", function(){
     },
     success: function(data){
       $('#mailModal form').remove()
-      $("#sendMessageToAgent").remove()
+      $('#sendMessageToAgent').remove()
       $('#mailModal .modal-body').html('<p>Your request has been sent succesfully.</p>')
     }
   })

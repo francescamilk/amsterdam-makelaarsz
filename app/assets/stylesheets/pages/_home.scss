@@ -1,1 +1,19 @@
 // Specific CSS for your home-page
+
+.header {
+  height: 90vh;
+  position: relative;
+}
+
+.header::before {
+  content: "";
+  background-image: url('https://www.makelaaramsterdam.nl/wp-content/uploads/2020/11/99140453-1920x1280.jpg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.25;
+}
