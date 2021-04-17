@@ -13,14 +13,15 @@
                     input_html: { autocomplete: "current-password" } %>
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
-    
+      
       <div class="form-actions">
         <%= f.button :submit, "Log in", class: "btn btn-dark" %>
         
-        <%= link_to root_path do %>
-          <button class="btn btn-outline-dark">Go Back</button>
-        <% end %>
       </div>
+    <% end %>
+
+    <%= link_to root_path do %>
+      <button class="btn btn-outline-dark mt-2">Go Back</button>
     <% end %>
   </div>
 </div>
