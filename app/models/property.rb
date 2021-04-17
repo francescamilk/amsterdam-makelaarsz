@@ -11,8 +11,8 @@ class Property < ApplicationRecord
 
   scope :latest, -> { order created_at: :desc }
 
-  scope :for_sale, -> {  }
-  scope :for_rent, -> {  }
-  scope :sold, -> {  }
-  scope :leased, -> {  }
+  scope :for_sale, -> { where for_sale: true }
+  scope :for_rent, -> { where for_sale: false }
+  scope :sold, -> { where sold: true }
+  scope :leased, -> { where leased: true }
 end

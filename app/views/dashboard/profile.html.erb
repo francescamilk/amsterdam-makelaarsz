@@ -28,20 +28,20 @@
     <div class="col-md-4">
       <%= render "properties/agent_info" %>
 
-      <div class="row mt-sm-3 bg-light p-3">
-          <div class="col-6">
-            <p class="lead">0<br>Sold</p>
-          </div>
-          <div class="col-6">
-            <p class="lead">4<br>For Sale</p>
-          </div>
-          <div class="col-6">
-            <p class="lead">0<br>Leased</p>
-          </div>
-          <div class="col-6">
-            <p class="lead">4<br>For Rent</p>
-          </div>
+      <div class="row bg-light mt-4 text-center">
+        <div class="col-6">
+          <p class="lead"><%= @properties_for_sale.count %><br>For Sale</p>
         </div>
+        <div class="col-6">
+          <p class="lead"><%= @properties_sold.count %><br>Sold</p>
+        </div>
+        <div class="col-6">
+          <p class="lead"><%= @properties_for_rent.count %><br>For Rent</p>
+        </div>
+        <div class="col-6">
+          <p class="lead"><%= @properties_leased.count %><br>Leased</p>
+        </div>
+      </div>
     </div>
   </div>
 
