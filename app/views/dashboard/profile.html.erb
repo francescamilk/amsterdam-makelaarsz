@@ -28,18 +28,18 @@
     <div class="col-md-4">
       <%= render "properties/agent_info" %>
 
-      <div class="row bg-light mt-4 text-center">
+      <div class="row bg-light border mt-4 text-center">
         <div class="col-6">
-          <p class="lead"><%= @properties_for_sale.count %><br>For Sale</p>
+          <p><strong><%= @properties_for_sale.count %></strong><br>For Sale</p>
         </div>
         <div class="col-6">
-          <p class="lead"><%= @properties_sold.count %><br>Sold</p>
+          <p><strong><%= @properties_sold.count %></strong><br>Sold</p>
         </div>
         <div class="col-6">
-          <p class="lead"><%= @properties_for_rent.count %><br>For Rent</p>
+          <p><strong><%= @properties_for_rent.count %></strong><br>For Rent</p>
         </div>
         <div class="col-6">
-          <p class="lead"><%= @properties_leased.count %><br>Leased</p>
+          <p><strong><%= @properties_leased.count %></strong><br>Leased</p>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@
   <section class="my-5">
     <div class="row">
       <div class="col-12 pb-3">
-        <h4 class="border-bottom pb-1 pt-4">Some properties from <%= @account.first_name %></h4>
+        <h4 class="border-bottom pb-1 pt-4">Best properties from <%= @account.first_name %></h4>
       </div>
       <%= render "properties/agent_properties", properties: @my_properties %>
     </div>
