@@ -10,4 +10,9 @@ class Property < ApplicationRecord
   has_many_attached :photos
 
   scope :latest, -> { order created_at: :desc }
+
+  scope :for_sale, -> {  }
+  scope :for_rent, -> {  }
+  scope :sold, -> {  }
+  scope :leased, -> {  }
 end
