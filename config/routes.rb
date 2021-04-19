@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   resources :properties
   devise_for :accounts
   
-  get '/properties/sale', to: 'properties#for_sale', as: 'for_sale'
-  get '/properties/rent', to: 'properties#for_rent', as: 'for_rent'
+  get '/properties-sale', to: 'properties#for_sale', as: 'for_sale'
+  get '/properties-rent', to: 'properties#for_rent', as: 'for_rent'
   get '/account/properties', to: 'properties#my_properties'
   post '/agent/message', to: 'properties#email_agent', as: 'email_agent'
 
