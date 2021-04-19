@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get '/profile/:id', to: 'dashboard#profile', as: 'profile'
 
   get '/accounts', to: 'admin#accounts', as: 'accounts'
+
+  get '/contacts', to: 'public#contacts', as: 'contacts'
 end
