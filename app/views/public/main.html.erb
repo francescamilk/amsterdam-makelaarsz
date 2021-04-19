@@ -54,9 +54,15 @@
 
 
 <section class="latest-properties">
-    <div class="container py-5">
-      <h2 class="pb-2 border-bottom">Latest properties</h2>
-    </div>
+  <div class="container py-5">
+    <h2 class="pb-2 border-bottom">Latest properties</h2>
+  </div>
   <%= render "properties/properties", properties: @latest_properties %>
 </section>
 
+<section class="testimonials">
+  <div class="container py-5">
+    <h2 class="pb-2 border-bottom">Our customers says</h2>
+  </div>
+  <%= render "layouts/testimonials" %>
+</section>
