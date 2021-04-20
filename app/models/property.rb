@@ -22,7 +22,7 @@ class Property < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search_by_params,
-  against: [ :address, :neighborhood, :neighborhood_text, :price, :rooms, :bedrooms, :bathrooms ],
+  against: [ :address, :neighborhood, :neighborhood_text, :for_sale, :price, :rooms, :bedrooms, :bathrooms ],
   using: {
     tsearch: { prefix: true }
   }

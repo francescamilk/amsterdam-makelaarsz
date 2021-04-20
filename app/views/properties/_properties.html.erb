@@ -7,18 +7,16 @@
               <%= image_tag property.photos[0] %>
               <div class="c-header mt-2 px-3">
               <h4 class="mt-1 text-danger"><%= property.name.strip %></h4>
-              <p class="text-dark m-0"><%= property.address %></p>
-              <p class="text-dark m-0"><%= property.for_sale? ? "For Sale" : "For Rent" %></p>
-              <hr>
+              <p class="text-dark m-0 pb-3 border-bottom"><%= property.address %></p>
               </div>
             <% end %>
-            <div class="c-details d-flex justify-content-between px-3 mb-2">
-                <div class="amenities d-flex">
-                  <p class="mr-3"><i class="fas fa-couch fa-sm"></i> <%= property.rooms %></p>
-                  <p class="mr-3"><i class="fas fa-bed fa-sm"></i> <%= property.bedrooms %></p>
-                  <p><i class="fas fa-bath fa-sm"></i> <%= property.bathrooms %></p>
-                </div>
-                <p><i class="fas fa-tag fa-sm"></i> <%= property.price %></p>
+            <div class="c-details px-3">
+              <div class="amenities d-flex pt-3">
+                <p class="mr-3"><i class="fas fa-couch fa-sm"></i> <%= property.rooms %></p>
+                <p class="mr-3"><i class="fas fa-bed fa-sm"></i> <%= property.bedrooms %></p>
+                <p><i class="fas fa-bath fa-sm"></i> <%= property.bathrooms %></p>
+              </div>
+              <p><i class="fas fa-tag fa-sm pb-3"></i> <%= property.price %> <%= property.for_sale? ? "tot." : "/ month" %></p>
             </div>
           </div>
         </div>

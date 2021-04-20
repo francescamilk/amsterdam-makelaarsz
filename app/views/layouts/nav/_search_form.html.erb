@@ -1,0 +1,6 @@
+<%= form_tag(properties_path, method: :get) do %>
+    <%= text_field_tag :query, params[:query] %>
+  <button type="submit">
+    Search
+  </button>
+<% end %>
