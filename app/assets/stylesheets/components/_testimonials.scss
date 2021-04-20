@@ -3,6 +3,7 @@
   height:150px;
   width:100%;
 }
+
 .spacer2{
   height:20px;
   width:100%;
@@ -18,6 +19,7 @@
   border-radius:10px;
   z-index:9999;
 }
+
 .sdtestBg3{
   height: 100%;
   width: 80%;
@@ -29,6 +31,7 @@
   box-shadow: 2px 2px 8px #eee;
   z-index:1;
 }
+
 .sdtestBg2{
   height: 100%;
   width: 90%;
@@ -60,6 +63,7 @@
   background-size: 180px, 180px;
   z-index:3;
 }
+
 button.slick-prev.slick-arrow {
   position: absolute;
   z-index: 9999;
@@ -76,6 +80,7 @@ button.slick-prev.slick-arrow {
   background-image: url(https://farsighttechnologies.com/wp-content/uploads/2021/03/left-icon.png);
   background-size: 100% 100%;
 }
+
 button.slick-next.slick-arrow {
   position: absolute;
   bottom: -82px;
@@ -91,11 +96,13 @@ button.slick-next.slick-arrow {
   background-image: url(https://farsighttechnologies.com/wp-content/uploads/2021/03/right-icon.png);
   background-size: 100% 100%;
 }
+
 .pagingInfo {
   position: absolute;
   bottom: 0;
   z-index: 999;
 }
+
 .sdCustomSliderHeadig {
   color: #94A2B3;
   font-size: 15px;
@@ -103,6 +110,7 @@ button.slick-next.slick-arrow {
   line-height: 1.6em;
   text-align: center;
 }
+
 .sdCustomSliderBtn{
   display: inline-block;
   text-decoration: none;
@@ -115,10 +123,12 @@ button.slick-next.slick-arrow {
   font-size: 14px;
   font-weight: 500;
 }
+
 .sdAllContent{
   width:75%;
   margin:auto;
 }
+
 .thumbnail img {
   height: 55px;
   width: 55px;
@@ -126,10 +136,7 @@ button.slick-next.slick-arrow {
   margin: auto;
   margin-top: 15px;
 }
-.content{
-  display:block !important;
-  padding: 5px;
-}
+
 .SdClientName {
   text-align: center;
   color: #272D4E;
@@ -138,6 +145,7 @@ button.slick-next.slick-arrow {
   line-height: 1.4em;
   margin-top: 15px;
 }
+
 .SdClientDesc {
   text-align: center;
   color: red;
@@ -161,6 +169,7 @@ button.slick-next.slick-arrow {
   }
   
 }
+
 /* scroll bar */
 /* total width */
 .sd_scroll::-webkit-scrollbar {
@@ -172,6 +181,7 @@ button.slick-next.slick-arrow {
 .sd_scroll::-webkit-scrollbar-track {
   background-color:transparent;
 }
+
 .sd_scroll::-webkit-scrollbar-track:hover {
   background-color:transparent;
 }
@@ -182,6 +192,7 @@ button.slick-next.slick-arrow {
   border-radius:16px;
   
 }
+
 .sd_scroll::-webkit-scrollbar-thumb:hover {
   background-color:#a0a0a5;
 }

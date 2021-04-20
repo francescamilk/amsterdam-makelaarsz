@@ -15,4 +15,6 @@ class Property < ApplicationRecord
   scope :for_rent, -> { where for_sale: false }
   scope :sold, -> { where sold: true }
   scope :leased, -> { where leased: true }
+
+  include PgSearch::Model
 end
