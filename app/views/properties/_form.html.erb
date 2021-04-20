@@ -7,6 +7,12 @@
       <%= f.input :name %>
       <%= f.input :address,
                   hint: "Street, Post code, City" %>
+      <%= f.input :neighborhood,
+                  as: :radio_buttons,
+                  collection: ["Centrum", "West", "Nieuw West", "Zuid", "Zuidoost", "Oost", "Noord"] %>
+      <%= f.input :neighborhood_text,
+                  label: false,
+                  hint: "If you want to be more specific, type the neighborhood here (you still have to pick one)."  %>
       <%= f.input :price,
                   hint: "Total price (for sale) or monthly price (for rent)" %>
       <div class="d-flex justify-content-between">

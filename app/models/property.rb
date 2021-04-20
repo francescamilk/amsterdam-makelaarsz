@@ -5,6 +5,10 @@ class Property < ApplicationRecord
   validates :rooms, presence: true
   validates :bedrooms, presence: true
   validates :bathrooms, presence: true
+  validates :neighborhood, presence: true
+  validates :description, presence: true
+  validates :photos, presence: true
+
 
   belongs_to :account
   has_many_attached :photos
@@ -17,4 +21,9 @@ class Property < ApplicationRecord
   scope :leased, -> { where leased: true }
 
   include PgSearch::Model
+  pg_search_scope :search_by_address_price_rooms_bedrooms_bathrooms_neighborhood,
+  against: [ :name, :address, :price, :rooms, :bedrooms, :bathrooms, :neighborhood ],
+  using: {
+    tsearch: { prefix: true }
+  }
 end
