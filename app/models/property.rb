@@ -21,8 +21,8 @@ class Property < ApplicationRecord
   scope :leased, -> { where leased: true }
 
   include PgSearch::Model
-  pg_search_scope :search_by_address_price_rooms_bedrooms_bathrooms_neighborhood,
-  against: [ :name, :address, :price, :rooms, :bedrooms, :bathrooms, :neighborhood ],
+  pg_search_scope :search_by_params,
+  against: [ :address, :neighborhood, :neighborhood_text, :price, :rooms, :bedrooms, :bathrooms ],
   using: {
     tsearch: { prefix: true }
   }
