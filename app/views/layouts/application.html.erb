@@ -19,10 +19,13 @@
       <%= render "layouts/nav/public" %>
     </header>
 
+    <p id="notice"><%= notice %></p>
+
     <div class="content">
       <%= yield %>
     </div>
 
+    
     <footer>
       <% unless current_page?(dashboard_path)%>
         <%= render "layouts/footer" %>
