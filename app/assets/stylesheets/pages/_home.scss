@@ -18,7 +18,20 @@
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.6;
+}
+
+.header-copy {
+  position: absolute;
+  top: -4.5em;
+  left: 50vh;
+  h1 {
+    font-size: 4em;
+    -webkit-text-stroke: 1.4px #fff;
+    font-weight: 700;
+  }
+  h4 {
+    font-weight: 600;
+  }
 }
 
 .icon-square {

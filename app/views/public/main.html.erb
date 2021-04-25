@@ -1,6 +1,9 @@
 <div class="header overflow-hidden mb-5 text-center">
-  <div class="col-md-5 p-lg-5 mx-auto my-5">
-    <h1 class="fw-normal">Amsterdam Makelaars</h1>
+</div>
+
+<div class="col-12 text-center p-lg-5 my-5">
+  <div class="header-copy">
+    <h1>Amsterdam Makelaars</h1>
     <h4 class="lead fw-normal">Find the home you will proudly call yours.</h4>
     <%= link_to "All properties", properties_path, class: "btn btn-danger mt-4" %>
   </div>
@@ -30,16 +33,17 @@
   <%= render "properties/properties", properties: @latest_properties %>
 </section>
 
-<section class="price-offer">
-  <div class="container py-3 mt-4">
-    <h2 class="pb-2 border-bottom">Offers for agencies</h2>
-  </div>
-  <%= render "layouts/prices" %>
-</section>
-
 <section class="testimonials">
   <div class="container py-3 mt-4">
     <h2 class="pb-2 border-bottom">Our customers says</h2>
   </div>
   <%= render "layouts/testimonials" %>
 </section>
+
+<%# <section class="price-offer">
+  <div class="container py-3">
+    <h2 class="pb-2 border-bottom">Offers for agencies</h2>
+  </div>
+  <%= render "layouts/prices" %>
+<%# </section>
+ %>
