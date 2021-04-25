@@ -16,10 +16,10 @@ select:focus {
   overflow: hidden; }
   .tabs [class^="tab"] label,
   .tabs [class*=" tab"] label {
-    color: #efedef;
+    color: $myBlue;
     cursor: pointer;
     display: block;
-    font-size: 1.1em;
+    font-size: 1.6em;
     font-weight: 300;
     line-height: 1em;
     padding: 2rem 0;
@@ -40,10 +40,10 @@ select:focus {
     .tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
     .tabs [class*=" tab"] [type="radio"]:hover,
     .tabs [class*=" tab"] [type="radio"]:focus {
-      border-bottom: 1px solid #fd264f; }
+      border-bottom: 1px solid red; }
     .tabs [class^="tab"] [type="radio"]:checked,
     .tabs [class*=" tab"] [type="radio"]:checked {
-      border-bottom: 2px solid #fd264f; }
+      border-bottom: 2px solid red; }
     .tabs [class^="tab"] [type="radio"]:checked + div,
     .tabs [class*=" tab"] [type="radio"]:checked + div {
       opacity: 1; }
