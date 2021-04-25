@@ -12,13 +12,13 @@
   <button class="btn btn-danger btn-block mb-2" id="showPhone" data-phone="<%= @agent.telephone %>"><i class="fas fa-phone-square-alt"></i> <span>Call <%= @agent.first_name %></span></button>
 
   <div class="row">
-    <div class="col-md-6 pr-1">
+    <div class="col-md-6 px-md-1">
       <% unless current_page?(profile_path(@agent)) %>
         <%= link_to profile_path(@agent) do  %>
           <button class="btn btn-dark btn-block"><i class="far fa-id-badge"></i> See Profile</button>
         <% end %>
         </div>
-        <div class="col-md-6 pl-1">
+        <div class="col-md-6 px-md-1">
           <button type="button" class="btn btn-dark btn-block" data-toggle="modal" data-target="#mailModal"><i     class="fas fa-envelope-square"></i> Send Email</button>
         </div>
       <% end %>

@@ -5,14 +5,14 @@
   <div class="container mt-4">
     <div class="row">
       <div class="col-md-8">
-        <p><strong><%= @property.for_sale? ? "For Sale" : "For Rent" %></strong></p>
+        <p class="m-0"><strong><%= @property.for_sale? ? "For Sale" : "For Rent" %></strong></p>
         <div class="row d-flex justify-content-between">
           <div class="col-md-6">
             <h5 class="property-info"><%= @property.address %></h5>
-            <h3><%= number_to_currency(@property.price, :locale => :en) %> <%= @property.for_sale? ? "tot." : "/ month" %></h3>
+            <h3 class="pt-4 mb-0"><%= number_to_currency(@property.price, :locale => :en) %> <%= @property.for_sale? ? "tot." : "/ month" %></h3>
           </div>
 
-          <div class="col-md-6 text-center bg-light">
+          <div class="col-md-6 text-center mt-5 bg-light">
             <div class="row mr-md-2 bg-light p-2">
               <div class="col-4">
                 <p class="m-0"><strong>Rooms</strong></p>

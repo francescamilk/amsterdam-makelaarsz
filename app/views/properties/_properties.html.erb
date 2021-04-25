@@ -16,7 +16,7 @@
                 <p class="mr-3"><i class="fas fa-bed fa-sm"></i> <%= property.bedrooms %></p>
                 <p><i class="fas fa-bath fa-sm"></i> <%= property.bathrooms %></p>
               </div>
-              <p><i class="fas fa-tag fa-sm pb-3"></i> <%= property.price %> <%= property.for_sale? ? "tot." : "/ month" %></p>
+              <p><i class="fas fa-tag fa-sm pb-3"></i> <%= number_to_currency(property.price, :locale => :en) %> <%= property.for_sale? ? "tot." : "/ month" %></p>
             </div>
           </div>
         </div>
