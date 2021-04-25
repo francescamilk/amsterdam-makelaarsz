@@ -15,11 +15,11 @@
     <div class="col-md-6 px-md-1">
       <% unless current_page?(profile_path(@agent)) %>
         <%= link_to profile_path(@agent) do  %>
-          <button class="btn btn-dark btn-block"><i class="far fa-id-badge"></i> See Profile</button>
+          <button class="btn btn-blue btn-block"><i class="far fa-id-badge"></i> See Profile</button>
         <% end %>
         </div>
         <div class="col-md-6 px-md-1">
-          <button type="button" class="btn btn-dark btn-block" data-toggle="modal" data-target="#mailModal"><i     class="fas fa-envelope-square"></i> Send Email</button>
+          <button type="button" class="btn btn-blue btn-block" data-toggle="modal" data-target="#mailModal"><i     class="fas fa-envelope-square"></i> Send Email</button>
         </div>
       <% end %>
   </div>
