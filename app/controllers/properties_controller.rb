@@ -1,13 +1,29 @@
 class PropertiesController < ApplicationController
-  before_action :set_property, only: %i[ show edit update destroy ]
   before_action :authenticate_account!, only: %i[ new create edit update destroy ]
+  before_action :set_property, only: %i[ show edit update destroy ]
 
   # GET /properties or /properties.json
   def index
-    if params[:query].present?
-      @properties = Property.search_by_params(params[:query])
-    else
-      @properties = Property.all
+    @properties = Property.all
+
+    if params[:name_query].present?
+      @properties = @properties.search_by_name(params[:name_query])
+    end
+
+    if params[:neighborhood_query].present?
+      @properties = @properties.search_by_neighborhood(params[:neighborhood_query])
+    end
+    
+    if params[:min_rooms].present? || params[:max_rooms].present?
+      min_rooms = params[:min_rooms].present? ? params[:min_rooms] : 0
+      max_rooms = params[:max_rooms].present? ? params[:max_rooms] : 100000
+      @properties = @properties.filter_by_rooms(min_rooms, max_rooms)
+    end
+
+    if params[:min_price].present? || params[:max_price].present?
+      min_price = params[:min_price].present? ? params[:min_price] : 0
+      max_price = params[:max_price].present? ? params[:max_price] : 100000
+      @properties = @properties.filter_by_price(min_price, max_price)
     end
   end
 
