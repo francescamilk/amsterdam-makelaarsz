@@ -1,52 +1,51 @@
 <section id="contact">
-  <h1 class="section-header">CONTACT</h1>
-  
-  <div class="contact-wrapper">
-    <form id="contact-form" class="form-horizontal" role="form"> 
-      <div class="form-group">
-        <div class="col-sm-12">
-          <input type="text" class="contact-form-control" id="name" placeholder="NAME" name="name" value="" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-12">
-          <input type="email" class="contact-form-control" id="email" placeholder="EMAIL" name="email" value="" required>
-        </div>
-      </div>
-      <textarea class="contact-form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+    <div class="contact-wrapper">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="pb-2 pt-4 border-bottom">Write us anything</h2>
+          <%= form_tag email_agent_path, id: "email-agent" do %>
+            <div class="form-group">
+              <label for="message-first-name" class="col-form-label">First name:</label>
+              <%= text_field_tag :first_name, nil, class: "form-control", id: "message-first-name" %>
+            </div>
       
-      <button class="btn btn-primary contact-send-button" id="submit" type="submit" value="SEND">
-        <div class="button">
-          <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+            <div class="form-group">
+              <label for="message-last-name" class="col-form-label">Last name:</label>
+              <%= text_field_tag :last_name, nil, class: "form-control", id: "message-last-name" %>
+            </div>
+    
+            <div class="form-group">
+              <label for="message-email" class="col-form-label">Email:</label>
+              <%= text_field_tag :email, nil, class: "form-control", id: "message-email" %>
+            </div>
+            
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          <% end %>
         </div>
-      </button>
-    </form>
-    
-    
-      <div class="direct-contact-container">
-        <ul class="contact-list">
-          <li class="contact-list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City, State</span></i></li>
-          <li class="contact-list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>  
-          <li class="contact-list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">emailme@gmail.com</a></span></i></li>
-          
-        </ul>
-        <hr>
-        <ul class="social-media-list">
-          <li><a href="#" target="_blank" class="contact-icon">
-            <i class="fa fa-github" aria-hidden="true"></i></a>
-          </li>
-          <li><a href="#" target="_blank" class="contact-icon">
-            <i class="fa fa-twitter" aria-hidden="true"></i></a>
-          </li>
-          <li><a href="#" target="_blank" class="contact-icon">
-            <i class="fa fa-instagram" aria-hidden="true"></i></a>
-          </li>
-          <li><a href="#" target="_blank" class="contact-icon">
-            <i class="fa fa-codepen" aria-hidden="true"></i></a>
-          </li>
-        </ul>
-        <hr>
-        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
-      </div> 
+        
+        <div class="col-md-6">
+          <div class="direct-contact-container">
+            <iframe
+              class="mt-4"
+              width="100%"
+              height="250px"
+              style="border:0"
+              loading="lazy"
+              allowfullscreen
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCeKKpzIbagFEqQdSJo1AMMfaNV-M-LNzg
+                &q=Nieuwmarkt,Amsterdam">
+            </iframe>
+
+            <ul class="contact-list">
+              <li class="contact-list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Nieuwmarkt 1, Amsterdam</span></i></li>
+              <li class="contact-list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone">+31 06 845788098</span></i></li>  
+              <li class="contact-list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail">makelaars@fmilk.com</span></i></li>
+            </ul>
+          </div>
+        </div> 
+      </div>
   </div>
 </section>
