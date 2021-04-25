@@ -2,11 +2,12 @@
   <div class="col-md-5 p-lg-5 mx-auto my-5">
     <h1 class="fw-normal">Amsterdam Makelaars</h1>
     <h4 class="lead fw-normal">Find the home you will proudly call yours.</h4>
+    <%= link_to "All properties", properties_path, class: "btn btn-danger mt-4" %>
   </div>
 </div>
 
 <section class="search-prperties">
-  <div class="container py-2 mb-5">
+  <div class="container pb-2 mb-5">
     <h2 class="pb-2 mb-4 border-bottom">Find your home now</h2>
     <%= render "layouts/nav/search_form" %>
   </div>
