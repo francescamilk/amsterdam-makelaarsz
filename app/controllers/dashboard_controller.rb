@@ -1,7 +1,6 @@
 class DashboardController < ApplicationController
   def index
     @properties = Property.all
-    @my_properties = current_account.properties
   end
 
   def profile
@@ -9,7 +8,6 @@ class DashboardController < ApplicationController
     @agent = @account
 
     @property = Property.where(account_id: @account).latest.first
-    @my_properties = @account.properties
     
     @properties_for_sale = Property.where(account_id: @account).for_sale
     @properties_for_rent = Property.where(account_id: @account).for_rent

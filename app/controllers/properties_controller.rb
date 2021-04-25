@@ -30,7 +30,7 @@ class PropertiesController < ApplicationController
   # GET /properties/1 or /properties/1.json
   def show
     @agent = @property.account
-    @agent_properties = Property.where(account_id: @agent)
+    @agent_properties = Property.where(account_id: @agent).limit(4)
   end
 
   # GET /properties/new
@@ -88,11 +88,6 @@ class PropertiesController < ApplicationController
     @for_rent = Property.where(for_sale: false)
   end
   
-  def my_properties
-    @properties = Property.all
-    @my_properties = current_account.properties
-  end
-
   def email_agent
     # trigger email send
     agent_id = params[:agent_id]

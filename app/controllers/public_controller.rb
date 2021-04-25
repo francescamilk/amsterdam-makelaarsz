@@ -7,11 +7,6 @@ class PublicController < ApplicationController
     end
   end
 
-  def my_properties
-    @properties = Property.all
-    @my_properties = current_account.properties
-  end
-
   def contacts
   end
 end

@@ -1,4 +1,4 @@
-<% unless @my_properties.length == 0 %>
+<% unless @agent_properties.length == 0 %>
   <div class="row">
     <%= render "layouts/nav/sidebar" %>
   
@@ -19,7 +19,7 @@
             </thead>
           
             <tbody>
-              <% @my_properties.each do |property| %>
+              <% @agent_properties.each do |property| %>
                 <tr>
                   <td><%= property.name %></td>
                   <td><%= property.address %></td>
