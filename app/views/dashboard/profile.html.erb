@@ -9,7 +9,7 @@
         <div class="row d-flex justify-content-between">
           <div class="col-md-6">
             <h5 class="property-info"><%= @account.company %></h5>
-            <p>Registered from <%= @account.created_at.strftime("%a") %>, <%= @account.created_at.day.ordinalize %> <%= @account.created_at.strftime("%b") %></p>
+            <p>Registered from <%= time_ago_in_words @account.created_at %></p>
           </div>
         </div>
 

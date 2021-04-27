@@ -1,6 +1,10 @@
 .btn-blue {
   background-color: $myBlue;
   color: #fff;
+  &:hover {
+    color: #fff;
+    opacity: 0.9;
+  }
 }
 
 .btn-outline-blue {

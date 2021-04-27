@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   root to: 'public#main'
 
   resources :properties
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   get '/profile/:id', to: 'dashboard#profile', as: 'profile'
 
   get '/accounts', to: 'admin#accounts', as: 'accounts'
+  get '/all-posts', to: 'admin#posts_index', as: 'admin_posts'
 
   get '/contacts', to: 'public#contacts', as: 'contacts'
 end

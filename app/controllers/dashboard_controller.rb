@@ -1,6 +1,7 @@
 class DashboardController < ApplicationController
   def index
     @properties = Property.all
+    @agent_properties = current_account.properties
   end
 
   def profile
