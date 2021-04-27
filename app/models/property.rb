@@ -9,9 +9,10 @@ class Property < ApplicationRecord
   validates :description, presence: true
   validates :photos, presence: true
 
-
   belongs_to :account
+
   has_many_attached :photos
+  has_rich_text :rich_body
 
   scope :latest, -> { order created_at: :desc }
 
