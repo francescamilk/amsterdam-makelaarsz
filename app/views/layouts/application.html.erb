@@ -27,7 +27,7 @@
     <p id="notice"><%= notice %></p>
     
     <footer>
-      <% unless current_page?(dashboard_path)%>
+      <% unless current_page?(dashboard_path) || current_page?(post_path)%>
         <%= render "layouts/footer" %>
       <% end %>
     </footer>
