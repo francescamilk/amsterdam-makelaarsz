@@ -9,4 +9,8 @@
 
 .btn-outline-blue {
   border: solid 1px $myBlue;
+  &:hover {
+    color: #fff;
+    background-color: $myBlue;
+  }
 }
