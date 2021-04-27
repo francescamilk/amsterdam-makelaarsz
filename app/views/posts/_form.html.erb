@@ -1,17 +1,18 @@
-
-<%= simple_form_for(@post) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :url %>
-    <%= f.input :summary %>
-    <%= f.input :body %>
-    <%= f.input :image %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+<div class="form-container p-3 p-md-5 m-md-3">
+  <%= simple_form_for(@post) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  
+    <div class="form-inputs">
+      <%= f.input :title %>
+      <%= f.input :url %>
+      <%= f.input :summary %>
+      <%= f.input :body %>
+      <%= f.input :photo, as: :file %>
+    </div>
+  
+    <div class="form-actions">
+      <%= f.button :submit, class: "btn btn-blue" %>
+    </div>
+  <% end %>
+</div>
