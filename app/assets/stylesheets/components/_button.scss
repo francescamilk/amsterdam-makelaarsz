@@ -14,3 +14,12 @@
     background-color: $myBlue;
   }
 }
+
+.btn-white-blue {
+  background-color: #fff;
+  color: $myBlue;
+  &:hover {
+    color: #fff;
+    background-color: $myBlue;
+  }
+}

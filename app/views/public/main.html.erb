@@ -1,12 +1,17 @@
 <div class="header overflow-hidden mb-5 text-center">
 </div>
 
-<div class="col-12 text-center p-lg-5 my-5">
+<div class="col-12 text-center">
   <div class="header-copy">
     <h1>Amsterdam Makelaars</h1>
-    <h4 class="lead fw-normal">Find the home you will proudly call yours.</h4>
-    <%= link_to "See properties", properties_path, class: "btn btn-danger mt-4" %>
+    <h4 class="lead fw-normal">
+      Find the home you will proudly call yours.<br>
+      Selected apartments for sale and for rent.
+    </h4>
+    <%= link_to "See properties", properties_path, class: "btn btn-white-blue mt-4" %>
   </div>
+
+  <%= image_tag 'amsterdam-houses', :class => "header-img" %>
 </div>
 
 <section class="search-prperties">
