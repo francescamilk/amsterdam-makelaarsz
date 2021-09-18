@@ -1,6 +1,5 @@
 <div class="header overflow-hidden mb-5 text-center">
 </div>
-
 <div class="col-12 text-center">
   <div class="header-copy">
     <h1>Amsterdam Makelaars</h1>
@@ -10,41 +9,42 @@
     </h4>
     <%= link_to "See properties", properties_path, class: "btn btn-white-blue mt-4" %>
   </div>
-
-  <%= image_tag 'amsterdam-houses.png', :class => "header-img" %>
 </div>
-
 <section class="search-prperties">
   <div class="container pb-2 mb-5">
     <h2 class="pb-2 mb-4 border-bottom">Find your home now</h2>
     <%= render "layouts/nav/search_form" %>
   </div>
 </section>
-
-<section class="features">
-  <div class="container offers py-2">
-    <h2 class="pb-2 pt-4 border-bottom">What we offer</h2>
-      <div class="pt-3">
-        <%= render "layouts/features" %>
-      </div>
-  </div>
-</section>
-        
-
 <section class="latest-properties">
   <div class="container py-3 mt-5">
     <h2 class="pb-2 border-bottom">Latest properties</h2>
   </div>
   <%= render "properties/properties", properties: @latest_properties %>
 </section>
-
+<section class="features">
+  <div class="container offers py-2">
+    <h2 class="pb-2 pt-4 border-bottom">What we offer</h2>
+    <div class="pt-3">
+      <%= render "layouts/features" %>
+    </div>
+  </div>
+</section>
+<%# <section class="our-approach">
+  <div class="container">
+    <div class="text-card">
+      <h3>Our approach</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consequat id velit quis vestibulum. Nam id orci eu urna mollis porttitor. Nunc nisi ante, gravida at velit eu, aliquet sodales dui. Sed laoreet   condimentum nisi a egestas. <br>
+        Donec interdum ante ut enim consequat, quis varius nulla dapibus. Vivamus mollis fermentum augue a varius.   Vestibulum in sapien at lectus gravida lobortis vulputate sed metus. Duis scelerisque justo et maximus   efficitur. Donec eu eleifend quam. Curabitur aliquet commodo sapien eget vestibulum. </p>
+    </div>
+  </div>
+</section> %>
 <section class="testimonials">
   <div class="container py-3 mt-4">
     <h2 class="pb-2 border-bottom">Our customers says</h2>
   </div>
   <%= render "layouts/testimonials" %>
 </section>
-
 <%# <section class="price-offer">
   <div class="container py-3">
     <h2 class="pb-2 border-bottom">Offers for agencies</h2>

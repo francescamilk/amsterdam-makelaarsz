@@ -1,13 +1,30 @@
 // Specific CSS for your home-page
 
 .header {
-  height: 100vh;
+  height: 92vh;
   position: relative;
-  background-color: #B6D7E1;
-  margin-top: -3em;
+  background-color: #fff;
+  background-image: image-url('am-header.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.header-copy {
+  position: absolute;
+  text-align: left;
+  top: -32em;
+  left: 4em;
+  color: $myBlue;
 
   h1 {
-    font-size: 42px;
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  h4 {
+    font-weight: 500;
+    line-height: 1.2;
   }
 }
 
@@ -15,14 +32,6 @@
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 255.75), rgba(255, 255, 255, 0));
-}
-
-.header-img {
-  position: absolute;
-  width: 60vw;
-  top: -68vh;
-  left: 39vw;
-  transform: scaleX(-1);
 }
 
 .icon-square {
@@ -41,20 +50,8 @@
   }
 }
 
-@media only screen and (min-width: 900px) {
-  .header-copy {
-    position: absolute;
-    text-align: left;
-    top: -32em;
-    left: 4em;
-    color: $myBlue;
-    h1 {
-      font-size: 60px;
-      font-weight: 700;
-    }
-    h4 {
-      font-weight: 500;
-      line-height: 1.2;
-    }
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 55vh;
   }
 }

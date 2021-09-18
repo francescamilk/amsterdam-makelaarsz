@@ -1,10 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: transparent;
-  z-index: 1001;
   position: absolute;
-  width: 92vw;
-  margin: 0 2.6em;
+  z-index: 1001;
+  height: 12vh;
+  width: 100vw;
+  padding: 0 4em;
 }
 
 .navbar-lewagon .navbar-collapse {
