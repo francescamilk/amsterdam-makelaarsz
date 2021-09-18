@@ -13,6 +13,11 @@ class Property < ApplicationRecord
 
   has_many_attached :photos
 
+  $neighborhoods = []
+  Property.all.each do |p|
+    $neighborhoods << p.neighborhood unless $neighborhoods.include?(p.neighborhood)
+  end
+
   scope :latest, -> { order created_at: :desc }
 
   scope :for_sale, -> { where for_sale: true }

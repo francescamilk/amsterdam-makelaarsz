@@ -1,49 +1,49 @@
-<div class="col-12">
-   <%= form_tag properties_path, method: :get, class: "d-flex form-flex-end" do %>
-   <div class="form-group form-flex-1 mb-0 mr-1 d-sm-none d-md-block">
+<div class="row">
+  <%= form_tag properties_path, method: :get, class: "d-flex form-flex-end col-12" do %>
+    <div class="form-group form-flex-1 mb-0 mr-1 d-sm-none d-md-block">
       <%= text_field_tag :name_query,
-         params[:name_query],
-         class: "form-control hide-small",
-           placeholder: "Name/address"
-           %>
-   </div>
-   <div class="form-group form-flex-1 mb-0 mr-1">
-      <%= text_field_tag :neighborhood_query,
-         params[:neighborhood_query],
-         class: "form-control",
-           placeholder: "Neighborhood"
-           %>
-   </div>
-   <div class="form-group form-flex-1 mb-0 mr-1">
+        params[:name_query],
+        class: "form-control form-width hide-small",
+        placeholder: "Name/address"
+      %>
+    </div>
+    <div class="form-group form-flex-1 mb-0 mr-1">
+      <%= select_tag(:neighborhood_query, 
+          options_for_select($neighborhoods), 
+          class: "form-control form-width",
+          prompt: "Neighborhood") 
+       %>
+    </div>
+    <div class="form-group form-flex-1 mb-0 mr-1">
       <%= text_field_tag :min_rooms,
-         params[:min_rooms],
-         class: "form-control hide-small",
-           placeholder: "Min. rooms"
-           %>
-   </div>
-   <div class="form-group form-flex-1 mb-0 mr-1">
+          params[:min_rooms],
+          class: "form-control form-width hide-small",
+          placeholder: "Min. rooms"
+       %>
+    </div>
+    <div class="form-group form-flex-1 mb-0 mr-1">
       <%= text_field_tag :max_rooms,
-         params[:max_rooms],
-         class: "form-control hide-small",
-           placeholder: "Max. rooms"
-           %>
-   </div>
-   <div class="form-group form-flex-1 mb-0 mr-1">
+          params[:max_rooms],
+          class: "form-control form-width hide-small",
+          placeholder: "Max. rooms"
+      %>
+    </div>
+    <div class="form-group form-flex-1 mb-0 mr-1">
       <%= text_field_tag :min_price,
-         params[:min_price],
-         class: "form-control hide-small",
-           placeholder: "Min. price"
-           %>
-   </div>
-   <div class="form-group form-flex-1 mb-0 mr-1">
+          params[:min_price],
+          class: "form-control form-width hide-small",
+          placeholder: "Min. price"
+       %>
+    </div>
+    <div class="form-group form-flex-1 mb-0 mr-1">
       <%= text_field_tag :max_price,
-         params[:max_price],
-         class: "form-control",
-           placeholder: "Max. price"
-           %>
-   </div>
-   <%= button_tag type: 'submit', class: "btn btn-danger" do %>
-   <i class="fas fa-search"></i>
-   <% end %>
-   <% end %>
+          params[:max_price],
+          class: "form-control form-width",
+          placeholder: "Max. price"
+       %>
+    </div>
+    <%= button_tag type: 'submit', class: "btn btn-danger" do %>
+      <i class="fas fa-search"></i>
+    <% end %>
+  <% end %>
 </div>
