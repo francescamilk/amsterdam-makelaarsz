@@ -23,3 +23,29 @@
     background-color: $myBlue;
   }
 }
+
+.btn-red {
+  background-color: $red;
+  color: #fff;
+  &:hover {
+    color: #fff;
+    opacity: 0.9;
+  }
+}
+
+.btn-outline-red {
+  border: solid 1px $red;
+  &:hover {
+    color: #fff;
+    background-color: $red;
+  }
+}
+
+.btn-white-red {
+  background-color: #fff;
+  color: $red;
+  &:hover {
+    color: #fff;
+    background-color: $red;
+  }
+}

@@ -1,5 +1,9 @@
 // Specific CSS for your home-page
 
+h2 {
+  color: $myBlue;
+}
+
 .header {
   height: 92vh;
   position: relative;
@@ -51,7 +55,10 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .header {
-    height: 55vh;
+  .header-copy {
+    top: -35em;
+    left: 0;
+    padding: 2em 0;
+    margin-left: .8em;
   }
 }
