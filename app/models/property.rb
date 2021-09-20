@@ -16,6 +16,11 @@ class Property < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
+  $neighborhoods = []
+  Property.all.each do |p|
+    $neighborhoods << p.neighborhood unless $neighborhoods.include?(p.neighborhood)
+  end
+
   scope :latest, -> { order created_at: :desc }
 
   scope :for_sale, -> { where for_sale: true }
