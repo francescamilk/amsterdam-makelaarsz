@@ -1,19 +1,17 @@
 <div class="split left">
-  <div class="container pt-5">
-    <h2 class="pt-4">Our latest news</h2>
+  <div class="container">
+    <h2 class="pt-3">Our latest news</h2>
     <p class="pb-4">Stay up to date with the best housing content.</p>
-  
     <% @posts.each do |post| %>
       <div class="row">
         <div class="col-10 pb-4 border-bottom">
-        <h3 class="pt-4"><%= post.title %></h3>
-        <p><%= post.summary %></p>
-        <%= link_to "Read more", post_path(post), class: "btn btn-blue" %>
+          <h3 class="pt-4"><%= post.title %></h3>
+          <p><%= post.summary %></p>
+          <%= link_to "Read more", post_path(post), class: "btn btn-blue" %>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-
 <div class="split right">
 </div>

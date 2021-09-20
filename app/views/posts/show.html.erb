@@ -1,24 +1,21 @@
 <div class="photo-main" style="background-image:url('<%= url_for( @post.photo) %>')">
-
-<div class="post-content">
-  <div class="container pt-4">
-    <div class="post-details text-center">
-      <h2><%= @post.title %></h2>
-      <p class="text-muted"><i class="far fa-calendar-alt"></i> Published <%= time_ago_in_words @post.  created_at   %> ago</p>
-      <hr>
-    </div>
-    
-    <div class="post-body pt-4">
-      <span class="first-letter"><%= @post.body.slice(0,1) %></span><%= simple_format(@post.body[1..-1]) %>
-    </div>
-  
-    <div class="py-5">
-      <% if account_signed_in? && current_account.admin? %>
-        <%= link_to 'Edit', edit_post_path(@post) %> |
-        <%= link_to 'Back', admin_posts_path %>
-      <% else %>
-        <%= link_to 'Back to posts', posts_path, class: "btn btn-blue" %>
-      <% end %>
+  <div class="post-content">
+    <div class="container pt-4">
+      <div class="post-details text-center">
+        <h2><%= @post.title %></h2>
+        <p class="text-muted"><i class="far fa-calendar-alt"></i> Published <%= time_ago_in_words @post.  created_at   %> ago</p>
+        <hr>
+      </div>
+      <div class="post-body d-flex pt-4">
+        <span class="first-letter"><%= @post.body.slice(0,1) %></span><%= simple_format(@post.body[1..-1]) %>
+      </div>
+      <div class="py-5">
+        <% if account_signed_in? && current_account.admin? %>
+          <%= link_to 'Edit', edit_post_path(@post) %> |
+          <%= link_to 'Back', admin_posts_path %>
+        <% else %>
+          <%= link_to 'Back to posts', posts_path, class: "btn btn-blue" %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>

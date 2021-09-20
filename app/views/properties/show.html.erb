@@ -1,7 +1,6 @@
 <div class="property-show">
   <div class="photo-main" style="background-image:url('<%= url_for( @property.photos[0]) %>')">
   </div>
-  
   <div class="container mt-4">
     <div class="row">
       <div class="col-md-8">
@@ -11,7 +10,6 @@
             <h5 class="property-info"><%= @property.address %></h5>
             <h3 class="pt-4 mb-0"><%= number_to_currency(@property.price, :locale => :en) %> <%= @property.for_sale? ? "tot." : "/ month" %></h3>
           </div>
-
           <div class="col-md-6 text-center mt-5 bg-light">
             <div class="row mr-md-2 bg-light p-2">
               <div class="col-4">
@@ -32,7 +30,6 @@
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-md-12 mt-4 border-top border-bottom d-flex justify-content-between">
             <% if @property.for_sale? %>
@@ -40,30 +37,26 @@
             <% else %>
               <p class="mt-3 text-success"><strong><i class="far fa-lightbulb"></i> Available from <%= @property.available_date.strftime("%a") %>, <%= @property.available_date.day.ordinalize %> <%= @property.available_date.strftime("%b") %></strong></p>
             <% end %>
-            <p class="mt-3 text-success"><strong><i class="fas fa-search-dollar"></i> Can I afford this property?</strong></p>
+            <p class="mt-3 text-success hide-small"><strong><i class="fas fa-search-dollar"></i> Can I afford this property?</strong></p>
           </div>
         </div>
-
-      <div class="row mt-5">
-        <div class="col-md-12">
-          <h3><%= @property.name %></h3>
-          <h5>Property Description:</h5>
-          <div id="property-details">
-            <p class="text-justify"><%= simple_format(@property.description) %></p>
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <h3><%= @property.name %></h3>
+            <h5>Property Description:</h5>
+            <div id="property-details">
+              <p class="text-justify"><%= simple_format(@property.description) %></p>
+            </div>
+            <button class="btn btn-outline-blue mt-2" id="toggleDetails">Show More</button>
+            <% if @property.for_sale? %>
+              <p class="text-mortgage mt-5">* This rate is based on a 30 year mortgage, after paying an initial 10% down payment. Shorter term mortgages would require a highly monthly repayment.</p>
+            <% end %>
           </div>
-          <button class="btn btn-outline-blue mt-2" id="toggleDetails">Show More</button>
-          
-          <% if @property.for_sale? %>
-            <p class="text-mortgage mt-5">* This rate is based on a 30 year mortgage, after paying an initial 10% down payment. Shorter term mortgages would require a highly monthly repayment.</p>
-          <% end %>
         </div>
       </div>
-    </div>
-
-    <div class="col-md-4">
-      <%= render "properties/agent_info" %>
-
-      <iframe
+      <div class="col-md-4">
+        <%= render "properties/agent_info" %>
+        <iframe
       class="mt-4"
       width="100%"
       height="250px"
@@ -72,26 +65,21 @@
       allowfullscreen
       src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCeKKpzIbagFEqQdSJo1AMMfaNV-M-LNzg
         &q=<%= @property.address.to_param %>">
-    </iframe>
-    </div>
-  </div>
-
-  <section class="my-5">
-    <div class="row">
-      <div class="col-12 pb-3">
-        <h4 class="border-bottom pb-1">Other properties from <%= @agent.company %></h4>
+        </iframe>
       </div>
-      <%= render "properties/properties", properties: @agent_properties %>
     </div>
-  </section>
-</div>
-
-
-<div class="container">
-  <i class="fas fa-undo-alt"></i> <%= link_to 'Back', properties_path %>
-  
-  <% if account_signed_in? && @property.account_id == current_account.id %>
-    <%= link_to 'Edit', edit_property_path(@property) %>
-  <% end %>
-</div>
-
+    <section class="my-5">
+      <div class="row">
+        <div class="col-12 pb-3">
+          <h4 class="border-bottom pb-1">Other properties from <%= @agent.company %></h4>
+        </div>
+        <%= render "properties/properties", properties: @agent_properties %>
+      </div>
+    </section>
+  </div>
+  <div class="container">
+    <i class="fas fa-undo-alt"></i> <%= link_to 'Back', properties_path %>
+    <% if account_signed_in? && @property.account_id == current_account.id %>
+      <%= link_to 'Edit', edit_property_path(@property) %>
+    <% end %>
+  </div>
