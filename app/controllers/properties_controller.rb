@@ -26,12 +26,8 @@ class PropertiesController < ApplicationController
       @properties = @properties.filter_by_price(min_price, max_price)
     end
 
-    @markers = @properties.geocoded.map do |p|
-      {
-        lat: p.latitude,
-        lng: p.longitude
-        # info_window: render_to_string(partial: "info_window", locals: { flat: flat })
-      }
+    @markers = @properties.map do |p|
+      p.address
     end
   end
 

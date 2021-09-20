@@ -8,12 +8,18 @@
     <div class="col-md-6 col-12 mt-4">
       <%= render "properties/properties_scroll" %>
     </div>
-    <div class="col-md-6 col-12 mt-4">
-      <div id="map"
-      style="width: 100%; height: 600px;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
+    <div class="col-md-6 col-12">
+      <iframe
+              class="mt-4"
+              id = "gmap"
+              width="100%"
+              height="95%"
+              style="border:0"
+              loading="lazy"
+              allowfullscreen
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCeKKpzIbagFEqQdSJo1AMMfaNV-M-LNzg
+                &q=<%= @markers.sample %>">
+      </iframe>
     </div>
   </div>
 </div>
