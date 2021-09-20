@@ -22,8 +22,8 @@ require("trix")
 require("@rails/actiontext")
 
 // Mapbox
-import { initMapbox } from '../plugins/init_mapbox';
+// import { initMapbox } from '../plugins/init_mapbox';
 
-document.addEventListener('turbolinks:load', () => {
-  initMapbox();
-})
+// document.addEventListener('turbolinks:load', () => {
+//   initMapbox();
+// })
