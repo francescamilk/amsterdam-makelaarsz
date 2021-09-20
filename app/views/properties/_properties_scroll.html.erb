@@ -1,17 +1,21 @@
-<div class="row">
-  <div class="cards-scrollbox">
-    <% @properties.each do |property| %>
-      <%= link_to property_path(property) do %>
-        <div class="card-product">
-          <%= image_tag property.photos[0] %>
-          <div class="card-product-infos d-flex w-100 justify-content-between">
-            <div>
-              <h2 class="title-card"><%= property.name %></h2>
-              <p><i class="fas fa-map-marker-alt"></i> <%= property.address %></p>
+<div class="cards-scrollbox">
+  <% @properties.each do |property| %>
+    <%= link_to property_path(property) do %>
+      <div class="card-product">
+        <%= image_tag property.photos[0] %>
+        <div class="card-product-infos d-flex w-100 justify-content-between">
+          <div>
+            <h2 class="title-card"><%= property.name %></h2>
+            <p><i class="fas fa-map-marker-alt"></i> <%= property.address %></p>
+            <p><i class="fas fa-tag fa-sm"></i> <%= number_to_currency(property.price, :locale => :en) %> <%= property.for_sale? ? "tot." : "/ month" %></p>
+            <div class="d-flex">
+              <p class="mr-3"><i class="fas fa-couch fa-sm"></i> <%= property.rooms %></p>
+              <p class="mr-3"><i class="fas fa-bed fa-sm"></i> <%= property.bedrooms %></p>
+              <p><i class="fas fa-bath fa-sm"></i> <%= property.bathrooms %></p>
             </div>
           </div>
         </div>
-      <% end %>
+      </div>
     <% end %>
-  </div>
+  <% end %>
 </div>

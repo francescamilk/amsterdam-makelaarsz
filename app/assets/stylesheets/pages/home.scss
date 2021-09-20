@@ -55,10 +55,18 @@ h2 {
 }
 
 @media only screen and (max-width: 768px) {
+  .header {
+    background-image: none;
+  }
+
   .header-copy {
     top: -35em;
     left: 0;
     padding: 2em 0;
     margin-left: .8em;
+
+    h1 {
+      font-size: 50px;
+    }
   }
 }

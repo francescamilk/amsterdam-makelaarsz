@@ -36,8 +36,7 @@
 }
 
 .card-product {
-  overflow: hidden;
-  height: 120px;
+  height: 10em;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -58,20 +57,19 @@
 
   img {
     height: 100%;
-    width: 120px;
+    width: 14em;
     object-fit: cover;
   }
 
   h2 {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     margin: 0;
   }
 
   p {
     font-size: 12px;
-    line-height: 1.4;
-    opacity: .7;
+    opacity: .8;
     margin-bottom: 0;
     margin-top: 8px;
   }
@@ -86,3 +84,8 @@
   transform: scale(1.02);
 }
 
+@media only screen and (max-width: 768px) {
+  .card-product img {
+    width: 9em;
+  }
+}
