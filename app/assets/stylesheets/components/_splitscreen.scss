@@ -23,3 +23,10 @@
   background-position: center;
   background-size: cover;
 }
+
+
+@media only screen and (max-width: 768px) {
+  .left {
+    width: 100vw;
+  }
+}
