@@ -1,25 +1,25 @@
-  <div class="container">
-    <div class="row mx-auto justify-content-between">
-      <% properties.each do |property| %>
-        <div class="col-md-3">
-          <div class="card-latest mb-4">
-            <%= link_to(property_path(property)) do %>
-              <%= image_tag property.photos[0] %>
-              <div class="c-header mt-2 px-3">
-              <h4 class="mt-1 text-danger"><%= property.name.strip %></h4>
-              <p class="text-dark m-0 pb-3 border-bottom"><%= property.address %></p>
-              </div>
-            <% end %>
-            <div class="c-details px-3">
-              <div class="amenities d-flex pt-3">
-                <p class="mr-3"><i class="fas fa-couch fa-sm"></i> <%= property.rooms %></p>
-                <p class="mr-3"><i class="fas fa-bed fa-sm"></i> <%= property.bedrooms %></p>
-                <p><i class="fas fa-bath fa-sm"></i> <%= property.bathrooms %></p>
-              </div>
-              <p><i class="fas fa-tag fa-sm pb-3"></i> <%= number_to_currency(property.price, :locale => :en) %> <%= property.for_sale? ? "tot." : "/ month" %></p>
+<div class="container">
+  <div class="row mx-auto justify-content-between">
+    <% properties.each do |property| %>
+      <div class="col-md-3">
+        <div class="card-latest mb-4">
+          <%= link_to(property_path(property)) do %>
+            <%= image_tag property.photos[0] %>
+            <div class="c-header mt-2 px-3">
+              <h4 class="pt-2 text-danger"><%= property.name.strip %></h4>
+              <p class="text-dark m-0 pb-3"><%= property.address %></p>
             </div>
+          <% end %>
+          <div class="c-details border-top">
+            <div class="amenities d-flex pt-3">
+              <p class="mr-3"><i class="fas fa-couch fa-sm"></i> <%= property.rooms %></p>
+              <p class="mr-3"><i class="fas fa-bed fa-sm"></i> <%= property.bedrooms %></p>
+              <p><i class="fas fa-bath fa-sm"></i> <%= property.bathrooms %></p>
+            </div>
+            <p><i class="fas fa-tag fa-sm pb-3"></i> <%= number_to_currency(property.price, :locale => :en) %> <%= property.for_sale? ? "tot." : "/ month" %></p>
           </div>
         </div>
-      <% end %>
+      </div>
+    <% end %>
   </div>
 </div>

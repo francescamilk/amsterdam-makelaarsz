@@ -3,9 +3,17 @@
     <%= render "layouts/nav/search_form" %>
   </div>
 </div>
-
-<div class="row">
-  <div class="col-md-12 mt-4">
-    <%= render "properties/properties", properties: @properties %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-12 mt-4">
+      <%= render "properties/properties_scroll" %>
+    </div>
+    <div class="col-md-6 col-12 mt-4">
+      <div id="map"
+      style="width: 100%; height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
   </div>
 </div>

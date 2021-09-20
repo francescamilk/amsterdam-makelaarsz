@@ -12,6 +12,9 @@ class Property < ApplicationRecord
   belongs_to :account
 
   has_many_attached :photos
+  
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   scope :latest, -> { order created_at: :desc }
 
