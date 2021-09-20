@@ -21,9 +21,10 @@ import 'bootstrap';
 require("trix")
 require("@rails/actiontext")
 
-// Mapbox
-// import { initMapbox } from '../plugins/init_mapbox';
+// Algolia
+ import { initAutocomplete } from '../plugins/init_autocomplete';
 
-// document.addEventListener('turbolinks:load', () => {
-//   initMapbox();
-// })
+document.addEventListener('turbolinks:load', () => {
+  initAutocomplete();
+});
+  
