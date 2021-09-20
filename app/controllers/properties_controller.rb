@@ -25,6 +25,14 @@ class PropertiesController < ApplicationController
       max_price = params[:max_price].present? ? params[:max_price] : 100000
       @properties = @properties.filter_by_price(min_price, max_price)
     end
+
+    @markers = @properties.geocoded.map do |p|
+      {
+        lat: p.latitude,
+        lng: p.longitude
+        # info_window: render_to_string(partial: "info_window", locals: { flat: flat })
+      }
+    end
   end
 
   # GET /properties/1 or /properties/1.json
