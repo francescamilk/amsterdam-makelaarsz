@@ -22,9 +22,9 @@ require("trix")
 require("@rails/actiontext")
 
 // Algolia
- import { initAutocomplete } from '../plugins/init_autocomplete';
+//  import { initAutocomplete } from '../plugins/init_autocomplete';
 
-document.addEventListener('turbolinks:load', () => {
-  initAutocomplete();
-});
+// document.addEventListener('turbolinks:load', () => {
+//   initAutocomplete();
+// });
   
