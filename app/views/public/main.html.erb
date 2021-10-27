@@ -4,12 +4,9 @@
       <h1>Amsterdam Makelaars</h1>
       <h4 class="lead fw-normal">
         Find the home you will proudly call yours. Selected apartments for sale.
-        <%# <br>
-      Selected apartments for sale and for rent. %>
       </h4>
-      <%# <%= link_to "See properties", properties_path, class: "btn btn-outline-red mt-4" %>
     </div>
-    <%= image_tag 'heroBanner.jpg' %>
+    <%= image_tag 'heroBanner.jpg', id: 'hero' %>
   </div>
 </header>
 <section class="search-prperties">
@@ -32,15 +29,6 @@
     </div>
   </div>
 </section>
-<%# <section class="our-approach">
-  <div class="container">
-    <div class="text-card">
-      <h3>Our approach</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consequat id velit quis vestibulum. Nam id orci eu urna mollis porttitor. Nunc nisi ante, gravida at velit eu, aliquet sodales dui. Sed laoreet   condimentum nisi a egestas. <br>
-        Donec interdum ante ut enim consequat, quis varius nulla dapibus. Vivamus mollis fermentum augue a varius.   Vestibulum in sapien at lectus gravida lobortis vulputate sed metus. Duis scelerisque justo et maximus   efficitur. Donec eu eleifend quam. Curabitur aliquet commodo sapien eget vestibulum. </p>
-    </div>
-  </div>
-</section> %>
 <section class="luxe-properties">
   <div class="container py-3 mt-5">
     <h2 class="pb-2 border-bottom">Luxurious nests</h2>
@@ -53,10 +41,3 @@
   </div>
   <%= render "layouts/testimonials" %>
 </section>
-<%# <section class="price-offer">
-  <div class="container py-3">
-    <h2 class="pb-2 border-bottom">Offers for agencies</h2>
-  </div>
-  <%= render "layouts/prices" %>
-<%# </section>
- %>
