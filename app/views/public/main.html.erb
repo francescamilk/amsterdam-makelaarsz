@@ -1,15 +1,17 @@
-<div class="header overflow-hidden mb-5 text-center">
-</div>
-<div class="col-6 col-md-12 text-center">
-  <div class="header-copy">
-    <h1>Amsterdam Makelaars</h1>
-    <h4 class="lead fw-normal">
-      Find the home you will proudly call yours.<br>
-      Selected apartments for sale and for rent.
-    </h4>
-    <%= link_to "See properties", properties_path, class: "btn btn-outline-red mt-4" %>
+<header>
+  <div class="container c-mg">
+    <div class="header-copy">
+      <h1>Amsterdam Makelaars</h1>
+      <h4 class="lead fw-normal">
+        Find the home you will proudly call yours. Selected apartments for sale.
+        <%# <br>
+      Selected apartments for sale and for rent. %>
+      </h4>
+      <%# <%= link_to "See properties", properties_path, class: "btn btn-outline-red mt-4" %>
+    </div>
+    <%= image_tag 'heroBanner.jpg' %>
   </div>
-</div>
+</header>
 <section class="search-prperties">
   <div class="container pb-2 mb-5">
     <h2 class="pb-2 mb-4 border-bottom">Find your home now</h2>
