@@ -19,11 +19,8 @@
 
 
 @media only screen and (max-width: 768px) {
-  .navbar-lewagon {
-    background-color: white;
-  }
-
-  .navbar-lewagon .navbar-collapse {
+  .navbar-lewagon,
+  .navbar-collapse {
     background-color: white;
     padding: 1em;
   }
